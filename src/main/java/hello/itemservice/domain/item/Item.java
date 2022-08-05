@@ -1,14 +1,13 @@
 package hello.itemservice.domain.item;
 
-import lombok.Data; //위험함
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
-@Getter@Setter
+@Data
 public class Item {
+
     private Long id;
     private String itemName;
-    private Integer price;  //integer쓰는 이유 null 대비
+    private Integer price;
     private Integer quantity;
 
     public Item() {
@@ -19,8 +18,4 @@ public class Item {
         this.price = price;
         this.quantity = quantity;
     }
-
-
-
-
 }
