@@ -20,9 +20,9 @@ public class Item {
     public Item() {
     }
 
-    public Item(String itemName, Integer price, Integer quantity) {
+    public Item( String itemName, Long id,Integer price) {
+        this.id = id;
         this.itemName = itemName;
         this.price = price;
-        this.quantity = quantity;
     }
 }
