@@ -15,7 +15,7 @@
 <div class="container">
 
     <div class="py-5 text-center">
-        <h2 th:text="#{page.addItem}">상품 등록 폼</h2>
+        <h2 th:text="#{page.addItem}">상품 등록</h2>
     </div>
 
     <form action="item.html" th:action th:object="${item}" method="post">
@@ -41,8 +41,8 @@
             <div class="col">
                 <button class="w-100 btn btn-secondary btn-lg"
                         onclick="location.href='items.html'"
-                        th:onclick="|location.href='@{/message/items}'|"
-                        type="button">취소</button>
+                        th:onclick="|location.href='@{/validation/v1/items}'|"
+                        type="button" th:text="#{button.cancel}">취소</button>
             </div>
         </div>
 

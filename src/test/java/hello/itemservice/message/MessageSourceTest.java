@@ -24,7 +24,6 @@ public class MessageSourceTest {
 
     @Test
     void notFoundMessageCode() {
-//        ms.getMessage("no_code", null, null);
         assertThatThrownBy(() -> ms.getMessage("no_code", null, null))
                 .isInstanceOf(NoSuchMessageException.class);
     }
@@ -37,13 +36,13 @@ public class MessageSourceTest {
 
     @Test
     void argumentMessage() {
-//        String message = ms.getMessage("hello.name", new Object[]{"Spring"}, null);
-//        assertThat(message).isEqualTo("안녕 Spring");
+        String result = ms.getMessage("hello.name", new Object[]{"Spring"}, null);
+        assertThat(result).isEqualTo("안녕 Spring");
     }
 
     @Test
     void defaultLang() {
-//        assertThat(ms.getMessage("hello", null, null)).isEqualTo("안녕");
+        assertThat(ms.getMessage("hello", null, null)).isEqualTo("안녕");
         assertThat(ms.getMessage("hello", null, Locale.KOREA)).isEqualTo("안녕");
     }
 
@@ -51,6 +50,4 @@ public class MessageSourceTest {
     void enLang() {
         assertThat(ms.getMessage("hello", null, Locale.ENGLISH)).isEqualTo("hello");
     }
-
-
 }
