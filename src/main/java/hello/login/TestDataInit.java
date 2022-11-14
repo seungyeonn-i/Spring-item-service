@@ -1,7 +1,7 @@
-package hello.itemservice;
+package hello.login;
 
-import hello.itemservice.domain.item.Item;
-import hello.itemservice.domain.item.ItemRepository;
+import hello.login.domain.item.Item;
+import hello.login.domain.item.ItemRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
