@@ -1,5 +1,0 @@
-package hello.login.web;
-
-public class SessionConst {
-    public static final String LONGIN_MEMBER = "loginMember";
-}
