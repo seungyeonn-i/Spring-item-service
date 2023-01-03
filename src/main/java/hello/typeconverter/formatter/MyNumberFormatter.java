@@ -18,7 +18,7 @@ public class MyNumberFormatter implements Formatter<Number> {
 
     @Override
     public String print(Number object, Locale locale) {
-        log.info("object={}");
-        return null;
+        log.info("object={},locale={}", object, locale);
+        return NumberFormat.getInstance(locale).format(object);
     }
 }
